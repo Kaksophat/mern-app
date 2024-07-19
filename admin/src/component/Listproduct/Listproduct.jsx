@@ -9,7 +9,7 @@ const Listproduct = () => {
 
   const fetchInfo = async () => {
     try {
-      const response = await fetch('http://localhost:3000/allproduct');
+      const response = await fetch('https://reactjs-e-comer-backend.onrender.com/allproduct');
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -36,7 +36,7 @@ const Listproduct = () => {
     fetchInfo();
   }, []); // Empty dependency array ensures this runs only once
   const remove_product= async (_id)=>{
-    await fetch('http://localhost:3000/removeproduct',{
+    await fetch('https://reactjs-e-comer-backend.onrender.com/removeproduct',{
       method:'POST',
       headers: {
         Accept: 'application/json',
